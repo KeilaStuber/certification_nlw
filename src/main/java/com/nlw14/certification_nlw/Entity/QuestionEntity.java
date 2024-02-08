@@ -4,7 +4,8 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.mapping.List;
+
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -36,8 +37,7 @@ public class QuestionEntity {
     @OneToMany
     @JoinColumn(name = "question_id")
 
-    private java.util.List<AlternativeEntity> alternative;
-
+    private List<AlternativeEntity> alternative;
     @CreationTimestamp
     private LocalDateTime created_at;
     

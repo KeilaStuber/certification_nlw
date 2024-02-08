@@ -12,6 +12,7 @@ public class VerifyHasCertificationService {
     private CertificationStudentRepository csr;
 
     public boolean execute (VerifyHasCertificationDto dto){
+
         var result = this.csr.findByStudentEmailAndTechnology(dto.getEmail(), dto.getTechnology());
         if (!result.isEmpty()){
             return true;
