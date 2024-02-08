@@ -9,15 +9,14 @@ import com.nlw14.certification_nlw.Entity.CertificationStudentEntity;
 import com.nlw14.certification_nlw.Repository.CertificationStudentRepository;
 
 @Service
-public class RankingBestService {
+public class RankingtService {
 
     @Autowired
     private CertificationStudentRepository csr;
 
     public List<CertificationStudentEntity> execute(){
-        var result = this.csr.findBest10ByOrderByGradeDesc();
+        var result= this.csr.findBest10ByOrderByGradeDesc();
         return result;
-
     }
     
 }
